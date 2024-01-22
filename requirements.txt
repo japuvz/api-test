@@ -2,3 +2,4 @@ fastapi[standard]
 uvicorn==0.15.0
 pytest
 requests
+pydantic
