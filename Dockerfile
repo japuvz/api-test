@@ -1,5 +1,6 @@
 # Use the official Python base image
 FROM python:3.12-slim
+#FROM tiangolo/uvicorn-gunicorn-fastapi:python3.11-slim
 
 # Set the working directory in the container
 WORKDIR /app
@@ -11,7 +12,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code to the working directory
-COPY . .
+COPY ./app .
 
 # Expose the port on which the FastAPI application will run
 EXPOSE 8000
